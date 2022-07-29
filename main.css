@@ -1,0 +1,209 @@
+/* Feel free to remove these styles or customise in your own stylesheet 👍 */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* my styles: general css resets */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+    /* root em per spec */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    /* Soft violet to Soft blue*/
+    background-attachment: fixed;
+    position: static;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+/* my styles: common classes and custom styles */
+.card {
+    width: 88%;
+    max-width: 920px;
+
+    background-color: white;
+    color: hsl(238, 29%, 16%);
+
+    margin: 15rem auto;
+    border-radius: 2rem;
+    box-shadow: 0 4rem 3rem -1.25rem rgba(0, 0, 0, 0.275);
+}
+
+.card__img--desktop {
+    display: none;
+}
+
+.card__img--mobile {
+    text-align: center;
+}
+
+.card__body {
+    padding: 1rem 2rem 5rem;
+    max-width: 58ch;
+    margin: 0 auto;
+}
+
+.card__body-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+}
+
+.accordion {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    /* Light grayish blue */
+    color: hsl(240, 6%, 50%);
+    padding: 1.3rem 0;
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: hsl(237, 12%, 33%);
+}
+
+.accordion__header-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.accordion--collapsed .accordion__header-text {
+    font-weight: 400;
+}
+
+.accordion__header:hover .accordion__header-text,
+.accordion__header:active .accordion__header-text {
+    color: hsl(14, 88%, 65%);
+}
+
+.accordion .accordion__collapse-icon {
+    transform: rotate(180deg);
+    /* expanded state is when .accordion doesn't have .accordion--collapsed class*/
+}
+
+.accordion.accordion--collapsed .accordion__collapse-icon {
+    transform: rotate(0deg);
+}
+
+.accordion__body {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    max-width: 50ch;
+    padding-right: 1rem;
+}
+
+.accordion.accordion--collapsed>.accordion__body {
+    display: none;
+}
+
+.card__img {
+    position: relative;
+}
+
+.card__img--mobile {
+    height: 120px;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.card__img--mobile>.card__img--overlay {
+    width: 240px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-60%);
+    /* or => top: -110px */
+}
+
+
+@media (min-width: 800px) {
+    .card__img--mobile {
+        display: none;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .card {
+        margin: 10.5rem auto;
+    }
+
+    .col.card__img--desktop {
+        width: 42.5%;
+        background-image: url(./images/illustration-woman-online-desktop.svg), url(./images/bg-pattern-desktop.svg);
+        background-position: right center, right bottom 33%;
+        background-repeat: no-repeat, no-repeat;
+        margin-right: 1rem;
+    }
+
+    .col.card__body {
+        padding: 5.5rem 0 7.5rem;
+        padding-right: 2rem;
+        margin: 0 auto;
+        flex: 1 1 95ch;
+        max-width: 30rem;
+    }
+
+    .card__body-title {
+        text-align: left;
+    }
+
+    .accordion {
+        padding-right: 1.25rem;
+    }
+
+    .card__img--desktop {
+        display: block;
+    }
+
+    .card__img--desktop>.card__img--overlay {
+        position: absolute;
+        height: 200px;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        transform: translate(-50%, 24%)
+    }
+}
+
+@media (max-width: 1040px) {
+    .card__img--desktop>.card__img--overlay {
+        display: none;
+        /* the overlay image should display only for screen widths above 1040px */
+    }
+}

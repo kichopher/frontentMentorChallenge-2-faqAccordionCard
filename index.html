@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Style sheet -->
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <main>
+    <div class="card row">
+      <div class="card__img card__img--mobile col">
+        <!-- <img src="./images/bg-pattern-mobile.svg" alt="background graphics"> -->
+        <img src="./images/illustration-woman-online-mobile.svg" alt="illustration of woman and computer"
+          class="card__img--overlay">
+      </div>
+      <div class="card__img card__img--desktop col">
+        <!-- <img src="./images/bg-pattern-desktop.svg" alt="background graphics"> -->
+        <img src="./images/illustration-box-desktop.svg" alt="illustration of a cube with @ symbol"
+          class="card__img--overlay">
+      </div>
+      <div class="card__body col">
+        <h1 class="card__body-title">FAQ</h1>
+        <div class="card__body-content">
+          <div class="accordions">
+            <div class="accordion accordion--collapsed">
+              <div class="accordion__header">
+                <h3 class="accordion__header-text">How many team members can I invite?</h3>
+                <img src="./images/icon-arrow-down.svg"
+                  alt="Up arrow when accordion is open. Down arrow when accordion is closed"
+                  class="accordion__collapse-icon ">
+              </div>
+              <div class="accordion__body">
+                <p class="accordion__body-text">
+                  You can invite up to 2 additional users on the Free plan. There is no limit on
+                  team members for the Premium plan.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion accordion--collapsed">
+              <div class="accordion__header">
+                <h3 class="accordion__header-text">What is the maximum file upload size?</h3>
+                <img src="./images/icon-arrow-down.svg"
+                  alt="Up arrow when accordion is open. Down arrow when accordion is closed"
+                  class="accordion__collapse-icon ">
+              </div>
+              <div class="accordion__body">
+                <p class="accordion__body-text">
+                  No more than 2GB. All files in your account must fit your allotted storage space.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion accordion--collapsed">
+              <div class="accordion__header">
+                <h3 class="accordion__header-text">How many team members can I invite?</h3>
+                <img src="./images/icon-arrow-down.svg"
+                  alt="Up arrow when accordion is open. Down arrow when accordion is closed"
+                  class="accordion__collapse-icon ">
+              </div>
+              <div class="accordion__body">
+                <p class="accordion__body-text">
+                  Click “Forgot password” from the login page or “Change password” from your profile page.
+                  A reset link will be emailed to you.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion accordion--collapsed">
+              <div class="accordion__header">
+                <h3 class="accordion__header-text">How do I reset my password?</h3>
+                <img src="./images/icon-arrow-down.svg"
+                  alt="Up arrow when accordion is open. Down arrow when accordion is closed"
+                  class="accordion__collapse-icon ">
+              </div>
+              <div class="accordion__body">
+                <p class="accordion__body-text">
+                  Yes! Send us a message and we’ll process your request no questions asked.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion accordion--collapsed">
+              <div class="accordion__header">
+                <h3 class="accordion__header-text">Do you provide additional support?</h3>
+                <img src="./images/icon-arrow-down.svg"
+                  alt="Up arrow when accordion is open. Down arrow when accordion is closed"
+                  class="accordion__collapse-icon ">
+              </div>
+              <div class="accordion__body">
+                <p class="accordion__body-text">
+                  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Christopher Raphael</a>.
+  </div> -->
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
